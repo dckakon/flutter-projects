@@ -9,4 +9,4 @@
 
 | [WhatsApp UI](https://github.com/dckakon/flutter-projects/tree/master/whatsapp_ui) | [Fooderlich](https://github.com/dckakon/flutter-projects/tree/master/fooderlich)
 |--|--|
-<img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/whatsapp.png"  alt="Screenshot"/> | <img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/fooderlich.gif"  alt="Screenshot"/> | 
+<img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/whatsapp.png" height=500 alt="Screenshot"/> | <img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/fooderlich.gif"  alt="Screenshot"/> | 
