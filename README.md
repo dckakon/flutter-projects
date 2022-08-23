@@ -1,7 +1,6 @@
 # flutter-projects
 
 
-## Product List App
  | [ProductList App](https://github.com/dckakon/flutter-projects/tree/master/product-list) | [LotteryApp](https://github.com/dckakon/flutter-projects/tree/master/lottery_app)
 |--|--|
 <img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/productlist.gif"  alt="Screenshot"/> | <img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/lotteryapp.gif"  alt="Screenshot"/> 
