@@ -1,10 +1,11 @@
 # flutter-projects
 
-## Product List App
-![product list](https://user-images.githubusercontent.com/61970194/184069060-41be7423-5174-4569-a3f0-95b12db3b61e.gif)
 
-## Lottery App
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/61970194/184069112-8e49a1b4-dac0-42ad-b523-021e75e0a994.gif)
+ | [ProductList App](https://github.com/dckakon/flutter-projects/tree/master/product-list) | [LotteryApp](https://github.com/dckakon/flutter-projects/tree/master/lottery_app)
+|--|--|
+<img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/productlist.gif"  alt="Screenshot"/> | <img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/lotteryapp.gif"  alt="Screenshot"/> 
 
-## WhatsApp 
-![whatsapp](https://user-images.githubusercontent.com/61970194/185732855-6ca3fb98-c5bb-409a-bc5f-9a60cf0650df.PNG)
+
+| [WhatsApp UI](https://github.com/dckakon/flutter-projects/tree/master/whatsapp_ui) | [Fooderlich](https://github.com/dckakon/flutter-projects/tree/master/fooderlich)
+|--|--|
+<img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/whatsapp.png" height=400 alt="Screenshot"/> | <img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/fooderlich.gif"  alt="Screenshot"/> | 
