@@ -1,7 +1,10 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import './widgets/new_transaction.dart';
-import './widgets/user_transaction.dart';
 import './models/transaction.dart';
+import 'widgets/transaction_list.dart';
+import './widgets/chart.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +20,23 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
+        accentColor: Colors.amber,
+        fontFamily: 'Quicksand',
+        /* textTheme: const TextTheme(
+          bodyText1: TextStyle(
+              fontSize: 18,
+              fontFamily: 'OpenSans',
+              fontWeight: FontWeight.bold),
+        ),*/
+
+        appBarTheme: const AppBarTheme(
+          toolbarTextStyle: TextStyle(
+            fontFamily: 'OpenSans',
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          ),
+        ),
       ),
       home: MyHomePage(),
     );
@@ -46,34 +65,58 @@ class _MyHomePageState extends State<MyHomePage> {
       date: DateTime.now(),
     ),
   ];
-  void _addNewTransaction(String txTitle, double txAmount) {
+
+  List<Transaction> get _recentTransactions {
+    return _userTransactions.where((tx) {
+      return tx.date.isAfter(
+        DateTime.now().subtract(
+          const Duration(days: 7),
+        ),
+      );
+    }).toList();
+  }
+
+  void _addNewTransaction(
+      String txTitle, double txAmount, DateTime chosenDate) {
     final newTx = Transaction(
       id: DateTime.now().toString(),
       title: txTitle,
       amount: txAmount,
-      date: DateTime.now(),
+      date: chosenDate,
     );
     setState(() {
       _userTransactions.add(newTx);
     });
   }
 
-  void startAddNewTransaction(BuildContext ctx) {
+  void _startAddNewTransaction(BuildContext ctx) {
     showModalBottomSheet(
         context: ctx,
         builder: (_) {
-          return NewTransaction(addTx: addTx);
+          return GestureDetector(
+            onTap: () {},
+            child: NewTransaction(addTx: _addNewTransaction),
+            behavior: HitTestBehavior.opaque,
+          );
         });
+  }
+
+  void _deleteTransaction(String id) {
+    setState(() {
+      _userTransactions.removeWhere((tx) => tx.id == id);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Personal Expense'),
+        title: Text(
+          'Personal Expense',
+        ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () => _startAddNewTransaction(context),
             icon: Icon(Icons.add),
           )
         ],
@@ -83,22 +126,17 @@ class _MyHomePageState extends State<MyHomePage> {
           //mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              width: double.infinity,
-              child: Card(
-                color: Colors.blue[200],
-                child: Center(child: Text('CHART!')),
-                elevation: 5,
-              ),
-            ),
-            UserTransactions(),
+            Chart(recentTransactions: _recentTransactions),
+            TransactionList(
+                transactions: _userTransactions,
+                deleteTx: _deleteTransaction),
           ],
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () => _startAddNewTransaction(context),
       ),
     );
   }
