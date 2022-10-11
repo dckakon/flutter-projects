@@ -9,6 +9,6 @@
 | [WhatsApp UI](https://github.com/dckakon/flutter-projects/tree/master/whatsapp_ui) | [Fooderlich](https://github.com/dckakon/flutter-projects/tree/master/fooderlich)
 |--|--|
 <img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/whatsapp.png" height=400 alt="Screenshot"/> | <img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/fooderlich.gif"  alt="Screenshot"/> | 
-| [Calculator UI](https://github.com/dckakon/flutter-projects/tree/master/calculator)) | [----]
+| [Calculator UI](https://github.com/dckakon/flutter-projects/tree/master/calculator)) | [Water Monitoring APP](https://github.com/dckakon/flutter-projects/tree/master/water_monitoring_app)
 |--|--|
-<img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/calculator.PNG" height=400 alt="Screenshot"/> | <img src=""  alt="Screenshot"/> | 
+<img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/calculator.PNG" height=400 alt="Screenshot"/> | <img src="https://github.com/dckakon/flutter-projects/blob/master/screenshots/water.gif"  alt="Screenshot"/> | 
